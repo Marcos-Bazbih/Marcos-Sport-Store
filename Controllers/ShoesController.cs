@@ -22,5 +22,10 @@ namespace Marcos_Sport_Store.Controllers
         {
             return View(sportStoreDataContext.Shoes);
         }
+
+        public ActionResult GetShoesInSale()
+        {
+            return View(sportStoreDataContext.Shoes.Where(shoe => shoe.InSale == true));
+        }
     }
 }
