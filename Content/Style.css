@@ -1,0 +1,145 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*---------------cards page---------------*/
+
+.cards-container {
+/*    width: 100vw;*/
+/*    min-height: 100vh;*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.shoe-card {
+    width: 33%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px double black;
+}
+
+.card-img-box {
+    width: 100%;
+    height: 80%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20%;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*.shoe-card {
+    width: 30%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    border: 4px double black;
+    border-radius: 15%;
+    margin-bottom: 4vh;
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-info, .card-img-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+}*/
+
+/*.card-info {
+    padding: 10%;
+    right: 100%;
+    font-size: 2rem;
+    overflow: auto;
+}
+
+.card-img-box {
+    right: 0;
+}
+
+.shoe-card:hover > .card-img-box {
+    right: -100%;
+}
+
+.shoe-card:hover > .card-info {
+    right: 0;
+}*/
+
+
+/*---------------cards page---------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------table page---------------*/
+
+.shoes-table {
+    margin: auto;
+}
+
+.table-tr {
+    transition: 0.3s;
+}
+
+    .table-tr:hover {
+        background: gray;
+    }
+
+
+.table-th {
+    text-align: center;
+    font-weight: 900;
+}
+
+.table-td {
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    text-align: center;
+    min-width: 8vw;
+    max-width: 13vw;
+    overflow-wrap: break-word;
+}
+
+.table-img {
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------table page---------------*/
+
+
