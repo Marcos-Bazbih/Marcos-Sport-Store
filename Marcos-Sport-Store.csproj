@@ -206,6 +206,10 @@
     <Content Include="Views\Shirts\GetShortShirts.cshtml" />
     <Content Include="Views\Shirts\GetDryfitShirts.cshtml" />
     <Content Include="Views\Shirts\GetShirtsByPrice.cshtml" />
+    <Content Include="Views\Pants\GetLongPants.cshtml" />
+    <Content Include="Views\Pants\GetShortPants.cshtml" />
+    <Content Include="Views\Pants\GetDryfitPants.cshtml" />
+    <Content Include="Views\Pants\GetPantsByPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

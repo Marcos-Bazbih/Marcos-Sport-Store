@@ -26,5 +26,21 @@ namespace Marcos_Sport_Store.Controllers
         {
             return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Pants"));
         }
+        public ActionResult GetShortPants()
+        {
+            return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Pants" && item.IsShort == true));
+        }
+        public ActionResult GetLongPants()
+        {
+            return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Pants" && item.IsShort == false));
+        }
+        public ActionResult GetDryfitPants()
+        {
+            return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Pants" && item.IsDryfit == true));
+        }
+        public ActionResult GetPantsByPrice()
+        {
+            return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Pants").OrderBy((item) => item.Price));
+        }
     }
 }

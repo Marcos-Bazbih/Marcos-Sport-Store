@@ -25,13 +25,13 @@ namespace Marcos_Sport_Store.Controllers
         {
             return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Shirts"));
         }
-        public ActionResult GetLongShirts()
-        {
-            return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Shirts" && item.IsShort == false));
-        }
         public ActionResult GetShortShirts()
         {
             return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Shirts" && item.IsShort == true));
+        }
+        public ActionResult GetLongShirts()
+        {
+            return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Shirts" && item.IsShort == false));
         }
         public ActionResult GetDryfitShirts()
         {

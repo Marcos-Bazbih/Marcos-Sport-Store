@@ -1,5 +1,16 @@
 ﻿@using Marcos_Sport_Store.Models;
 
+@{
+    string CheckBool(bool param)
+    {
+        if (param == true)
+        {
+            return "Yes";
+        }
+        return "No";
+    }
+}
+
 <table class="admin-table">
     <thead>
         <tr>
@@ -26,10 +37,28 @@
                 <td class="table-td">@clothing.Model</td>
                 <td class="table-td">@clothing.Price$</td>
                 <td class="table-td">@clothing.Quantity</td>
-                <td class="table-td">@clothing.IsShort</td>
-                <td class="table-td">@clothing.IsDryfit</td>
+                <td class="table-td">@CheckBool((bool)clothing.IsShort)</td>
+                <td class="table-td">@CheckBool((bool)clothing.IsDryfit)</td>
                 <td class="table-td"><img class="table-img" src="@clothing.Image" /></td>
             </tr>
         }
     </tbody>
 </table>
+<button>
+    @Html.ActionLink("Client", "GetPants", "Pants")
+</button>
+<button>
+    @Html.ActionLink("Admin", "GetPantsTable", "Pants")
+</button>
+<button>
+    @Html.ActionLink("Short Pants", "GetShortPants", "Pants")
+</button>
+<button>
+    @Html.ActionLink("Long Pants", "GetLongPants", "Pants")
+</button>
+<button>
+    @Html.ActionLink("Dryfit Pants", "GetDryfitPants", "Pants")
+</button>
+<button>
+    @Html.ActionLink("Price - Low to high", "GetPantsByPrice", "Pants")
+</button>
