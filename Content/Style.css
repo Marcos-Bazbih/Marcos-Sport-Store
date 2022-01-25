@@ -6,20 +6,18 @@
 
 
 
-/*---------------cards page---------------*/
+/*--------------- cards view ---------------*/
 
 .cards-container {
-/*    width: 100vw;*/
-/*    min-height: 100vh;*/
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    align-items: center;
 }
 
-.shoe-card {
+.card {
+    text-align: center;
     width: 33%;
-    height: fit-content;
+    height: 65vh;
     display: flex;
     flex-wrap: wrap;
     border: 4px double black;
@@ -32,12 +30,31 @@
 
 .card-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 100%;
     height: 20%;
 }
+
+.card-info-header, .card-info-footer {
+    width: 100%;
+    height: 50%;
+}
+
+.card-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .card-info-footer > h2 {
+        width: 30%;
+    }
 
 .card-img {
     width: 100%;
@@ -47,7 +64,7 @@
 
 
 
-/*.shoe-card {
+/*.card {
     width: 30%;
     height: 50vh;
     position: relative;
@@ -80,16 +97,16 @@
     right: 0;
 }
 
-.shoe-card:hover > .card-img-box {
+.card:hover > .card-img-box {
     right: -100%;
 }
 
-.shoe-card:hover > .card-info {
+.card:hover > .card-info {
     right: 0;
 }*/
 
 
-/*---------------cards page---------------*/
+/*--------------- cards view ---------------*/
 
 
 
@@ -104,10 +121,10 @@
 
 
 
-/*---------------table page---------------*/
+/*--------------- admin view ---------------*/
 
-.shoes-table {
-    margin: auto;
+.admin-table {
+    width:100%;
 }
 
 .table-tr {
@@ -115,7 +132,7 @@
 }
 
     .table-tr:hover {
-        background: red;
+        background: gray;
     }
 
 
@@ -130,9 +147,9 @@
     border-top: 5px solid black;
     border-bottom: 5px solid black;
     text-align: center;
+    height:30vh;
     min-width: 8vw;
-    max-width: 13vw;
-    overflow-wrap: break-word;
+    max-width: 15vw;
 }
 
 .table-img {
@@ -140,6 +157,4 @@
     height: 100%;
 }
 
-/*---------------table page---------------*/
-
-
+/*--------------- admin view ---------------*/

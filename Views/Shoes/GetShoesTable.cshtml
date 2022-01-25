@@ -1,6 +1,6 @@
 ﻿@using Marcos_Sport_Store.Models;
 
-<table class="shoes-table">
+<table class="admin-table">
     <thead>
         <tr>
             <th class="table-th">Id</th>
@@ -45,6 +45,9 @@
         }
     </tbody>
 </table>
+<button>
+    @Html.ActionLink("Shoes in Sale", "GetShoesInSale", "Shoes")
+</button>
 <button>
     @Html.ActionLink("Client", "GetShoes", "Shoes")
 </button>

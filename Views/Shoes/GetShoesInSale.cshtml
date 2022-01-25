@@ -1,18 +1,29 @@
-﻿<section>
-    @foreach (var shoe in Model)
+﻿@using Marcos_Sport_Store.Models;
+
+<section class="cards-container">
+    @foreach (Shoe shoe in Model)
     {
-        <article class="shoe-card">
-            <h1>@shoe.Id</h1>
-            <h1>@shoe.Type</h1>
-            <h1>@shoe.Company</h1>
-            <h1>@shoe.Model</h1>
-            <h1>@shoe.Price</h1>
-            <h1>@shoe.Quantity</h1>
-            <h1>@shoe.InSale</h1>
-            <img src="@shoe.Image" width="300px" height="300px" />
+        <article class="card">
+            <div class="card-img-box">
+                <img class="card-img"
+                     src="@shoe.Image" />
+            </div>
+            <div class="card-info">
+                <div class="card-info-header">
+                    <p>@shoe.Model</p>
+                </div>
+                <div class="card-info-footer">
+                    <p>@shoe.Price$</p>
+                    <p>@shoe.Company</p>
+                    <p>@shoe.Type</p>
+                </div>
+            </div>
         </article>
     }
-    <button>
-        @Html.ActionLink("All Shoes", "GetShoes", "Shoes")
-    </button>
 </section>
+<button>
+    @Html.ActionLink("Client", "GetShoes", "Shoes")
+</button>
+<button>
+    @Html.ActionLink("Admin", "GetShoesTable", "Shoes")
+</button>

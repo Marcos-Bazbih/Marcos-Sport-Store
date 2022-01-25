@@ -1,29 +1,23 @@
 ﻿@using Marcos_Sport_Store.Models;
 
 <section class="cards-container">
-    @foreach (Shoe shoe in Model)
+    @foreach (Clothing clothing in Model)
     {
         <article class="card">
             <div class="card-img-box">
                 <img class="card-img"
-                     src="@shoe.Image" />
+                     src="@clothing.Image" />
             </div>
             <div class="card-info">
                 <div class="card-info-header">
-                    <p>@shoe.Model</p>
+                    <p>@clothing.Model</p>
                 </div>
                 <div class="card-info-footer">
-                    <p>@shoe.Price$</p>
-                    <p>@shoe.Company</p>
-                    <p>@shoe.Type</p>
+                    <p>@clothing.Price$</p>
+                    <p>@clothing.Company</p>
+                    <p>@clothing.Type</p>
                 </div>
             </div>
         </article>
     }
 </section>
-<button>
-    @Html.ActionLink("Shoes in Sale", "GetShoesInSale", "Shoes")
-</button>
-<button>
-    @Html.ActionLink("Admin", "GetShoesTable", "Shoes")
-</button>
