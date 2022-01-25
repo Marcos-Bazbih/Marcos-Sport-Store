@@ -199,6 +199,11 @@
     <Content Include="Views\Shoes\GetShoesTable.cshtml" />
     <Content Include="Views\Clothing\GetShirts.cshtml" />
     <Content Include="Views\Clothing\GetPants.cshtml" />
+    <Content Include="Views\Clothing\GetShirtsTable.cshtml" />
+    <Content Include="Views\Clothing\GetPantsTable.cshtml" />
+    <Content Include="Views\Clothing\GetLongShirts.cshtml" />
+    <Content Include="Views\Clothing\GetShortShirts.cshtml" />
+    <Content Include="Views\Clothing\Testing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

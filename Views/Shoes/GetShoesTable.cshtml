@@ -1,5 +1,16 @@
 ﻿@using Marcos_Sport_Store.Models;
 
+@{
+    string CheckBool(bool param)
+    {
+        if (param == true)
+        {
+            return "Yes";
+        }
+        return "No";
+    }
+}
+
 <table class="admin-table">
     <thead>
         <tr>
@@ -16,32 +27,16 @@
     <tbody>
         @foreach (Shoe shoe in Model)
         {
-            if (shoe.InSale == true)
-            {
-                <tr class="table-tr">
-                    <td class="table-td">@shoe.Id</td>
-                    <td class="table-td">@shoe.Type</td>
-                    <td class="table-td">@shoe.Company</td>
-                    <td class="table-td">@shoe.Model</td>
-                    <td class="table-td">@shoe.Price$</td>
-                    <td class="table-td">@shoe.Quantity</td>
-                    <td class="table-td">Yes</td>
-                    <td class="table-td"><img class="table-img" src="@shoe.Image" /></td>
-                </tr>
-            }
-            else
-            {
-                <tr class="table-tr">
-                    <td class="table-td">@shoe.Id</td>
-                    <td class="table-td">@shoe.Type</td>
-                    <td class="table-td">@shoe.Company</td>
-                    <td class="table-td">@shoe.Model</td>
-                    <td class="table-td">@shoe.Price$</td>
-                    <td class="table-td">@shoe.Quantity</td>
-                    <td class="table-td">No</td>
-                    <td class="table-td"><img class="table-img" src="@shoe.Image" /></td>
-                </tr>
-            }
+            <tr class="table-tr">
+                <td class="table-td">@shoe.Id</td>
+                <td class="table-td">@shoe.Type</td>
+                <td class="table-td">@shoe.Company</td>
+                <td class="table-td">@shoe.Model</td>
+                <td class="table-td">@shoe.Price$</td>
+                <td class="table-td">@shoe.Quantity</td>
+                <td class="table-td">@CheckBool((bool)shoe.InSale)</td>
+                <td class="table-td"><img class="table-img" src="@shoe.Image" /></td>
+            </tr>
         }
     </tbody>
 </table>

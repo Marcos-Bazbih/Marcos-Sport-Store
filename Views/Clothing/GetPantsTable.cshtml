@@ -1,0 +1,35 @@
+﻿@using Marcos_Sport_Store.Models;
+
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th class="table-th">Id</th>
+            <th class="table-th">Type</th>
+            <th class="table-th">Gender</th>
+            <th class="table-th">Company</th>
+            <th class="table-th">Model</th>
+            <th class="table-th">Price</th>
+            <th class="table-th">Quantity</th>
+            <th class="table-th">Is Short</th>
+            <th class="table-th">Is Dryfit</th>
+            <th class="table-th">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Clothing clothing in Model)
+        {
+            <tr class="table-tr">
+                <td class="table-td">@clothing.Id</td>
+                <td class="table-td">@clothing.Type</td>
+                <td class="table-td">@clothing.Gender</td>
+                <td class="table-td">@clothing.Company</td>
+                <td class="table-td">@clothing.Model</td>
+                <td class="table-td">@clothing.Price$</td>
+                <td class="table-td">@clothing.Quantity</td>
+                <td class="table-td">@clothing.IsShort</td>
+                <td class="table-td">@clothing.IsDryfit</td>
+                <td class="table-td"><img class="table-img" src="@clothing.Image" /></td>
+            </tr>
+        }
+    </tbody>
+</table>
