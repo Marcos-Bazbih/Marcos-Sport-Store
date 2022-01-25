@@ -1,0 +1,41 @@
+﻿@using Marcos_Sport_Store.Models;
+
+<section class="cards-container">
+    @foreach (Clothing clothing in Model)
+    {
+        <article class="card">
+            <div class="card-img-box">
+                <img class="card-img"
+                     src="@clothing.Image" />
+            </div>
+            <div class="card-info">
+                <div class="card-info-header">
+                    <p>@clothing.Model</p>
+                </div>
+                <div class="card-info-footer">
+                    <p>@clothing.Price$</p>
+                    <p>@clothing.Company</p>
+                    <p>@clothing.Type</p>
+                </div>
+            </div>
+        </article>
+    }
+</section>
+<button>
+    @Html.ActionLink("Client", "GetShirts", "Shirts")
+</button>
+<button>
+    @Html.ActionLink("Admin", "GetShirtsTable", "Shirts")
+</button>
+<button>
+    @Html.ActionLink("Short Shirts", "GetShortShirts", "Shirts")
+</button>
+<button>
+    @Html.ActionLink("Long Shirts", "GetLongShirts", "Shirts")
+</button>
+<button>
+    @Html.ActionLink("Dryfit Shirts", "GetDryfitShirts", "Shirts")
+</button>
+<button>
+    @Html.ActionLink("Price - Low to high", "GetShirtsByPrice", "Shirts")
+</button>

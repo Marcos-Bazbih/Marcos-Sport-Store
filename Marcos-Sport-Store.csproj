@@ -134,8 +134,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ClothingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PantsController.cs" />
+    <Compile Include="Controllers\ShirtsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,13 +198,14 @@
     <Content Include="Views\Shoes\GetShoes.cshtml" />
     <Content Include="Views\Shoes\GetShoesInSale.cshtml" />
     <Content Include="Views\Shoes\GetShoesTable.cshtml" />
-    <Content Include="Views\Clothing\GetShirts.cshtml" />
-    <Content Include="Views\Clothing\GetPants.cshtml" />
-    <Content Include="Views\Clothing\GetShirtsTable.cshtml" />
-    <Content Include="Views\Clothing\GetPantsTable.cshtml" />
-    <Content Include="Views\Clothing\GetLongShirts.cshtml" />
-    <Content Include="Views\Clothing\GetShortShirts.cshtml" />
-    <Content Include="Views\Clothing\Testing.cshtml" />
+    <Content Include="Views\Shirts\GetShirts.cshtml" />
+    <Content Include="Views\Pants\GetPants.cshtml" />
+    <Content Include="Views\Shirts\GetShirtsTable.cshtml" />
+    <Content Include="Views\Pants\GetPantsTable.cshtml" />
+    <Content Include="Views\Shirts\GetLongShirts.cshtml" />
+    <Content Include="Views\Shirts\GetShortShirts.cshtml" />
+    <Content Include="Views\Shirts\GetDryfitShirts.cshtml" />
+    <Content Include="Views\Shirts\GetShirtsByPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
