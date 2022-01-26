@@ -1,0 +1,23 @@
+﻿@using Marcos_Sport_Store.Models;
+
+<section class="cards-container">
+    @foreach (Equipment equipment in Model)
+    {
+        <article class="card">
+            <div class="card-img-box">
+                <img class="card-img"
+                     src="@equipment.Image" />
+            </div>
+            <div class="card-info">
+                <div class="card-info-header">
+                    <p>@equipment.ProductName</p>
+                </div>
+                <div class="card-info-footer">
+                    <p>@equipment.Price$</p>
+                    <p>@equipment.Company</p>
+                    <p>@equipment.SportType</p>
+                </div>
+            </div>
+        </article>
+    }
+</section>

@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Marcos_Sport_Store.Controllers
 {
-    public class ShoesController : Controller
+    public class EquipmentController : Controller
     {
         static string connectionString = "Data Source=LENOVO-MARCOS;Initial Catalog=SportStoreDb;Integrated Security=True;Pooling=False";
         SportStoreDataContext sportStoreDataContext = new SportStoreDataContext(connectionString);
@@ -18,17 +18,15 @@ namespace Marcos_Sport_Store.Controllers
         }
 
 
-        public ActionResult GetShoes()
+        public ActionResult GetEquipment()
         {
-            return View(sportStoreDataContext.Shoes);
+            return View(sportStoreDataContext.Equipments);
         }
-        public ActionResult GetShoesTable()
+        public ActionResult GetEquipmentTable()
         {
-            return View(sportStoreDataContext.Shoes);
+            return View(sportStoreDataContext.Equipments);
         }
-        public ActionResult GetShoesInSale()
-        {
-            return View(sportStoreDataContext.Shoes.Where(shoe => shoe.InSale == true));
-        }
+
+
     }
 }

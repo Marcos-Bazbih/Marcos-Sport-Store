@@ -11,7 +11,7 @@ namespace Marcos_Sport_Store.Controllers
     {
         static string connectionString = "Data Source=LENOVO-MARCOS;Initial Catalog=SportStoreDb;Integrated Security=True;Pooling=False";
         SportStoreDataContext sportStoreDataContext = new SportStoreDataContext(connectionString);
-        // GET: Pants
+      
         public ActionResult Index()
         {
             return View();

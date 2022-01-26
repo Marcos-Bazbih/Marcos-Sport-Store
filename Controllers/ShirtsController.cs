@@ -17,6 +17,7 @@ namespace Marcos_Sport_Store.Controllers
             return View();
         }
 
+
         public ActionResult GetShirts()
         {
             return View(sportStoreDataContext.Clothings.Where(item => item.Type == "Shirts"));

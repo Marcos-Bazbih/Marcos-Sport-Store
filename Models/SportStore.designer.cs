@@ -749,6 +749,8 @@ namespace Marcos_Sport_Store.Models
 		
 		private System.Nullable<int> _TeamId;
 		
+		private string _Image;
+		
 		private EntityRef<Team> _Team;
 		
     #region Extensibility Method Definitions
@@ -769,6 +771,8 @@ namespace Marcos_Sport_Store.Models
     partial void OnQuantityChanged();
     partial void OnTeamIdChanging(System.Nullable<int> value);
     partial void OnTeamIdChanged();
+    partial void OnImageChanging(string value);
+    partial void OnImageChanged();
     #endregion
 		
 		public Equipment()
@@ -917,6 +921,26 @@ namespace Marcos_Sport_Store.Models
 					this._TeamId = value;
 					this.SendPropertyChanged("TeamId");
 					this.OnTeamIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Image", DbType="VarChar(MAX)")]
+		public string Image
+		{
+			get
+			{
+				return this._Image;
+			}
+			set
+			{
+				if ((this._Image != value))
+				{
+					this.OnImageChanging(value);
+					this.SendPropertyChanging();
+					this._Image = value;
+					this.SendPropertyChanged("Image");
+					this.OnImageChanged();
 				}
 			}
 		}

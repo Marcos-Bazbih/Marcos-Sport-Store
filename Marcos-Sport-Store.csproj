@@ -144,6 +144,7 @@
     <Compile Include="Controllers\api\PantsController.cs" />
     <Compile Include="Controllers\api\ShirtsController.cs" />
     <Compile Include="Controllers\api\ShoesController.cs" />
+    <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PantsController.cs" />
     <Compile Include="Controllers\ShirtsController.cs" />
@@ -220,6 +221,8 @@
     <Content Include="Views\Pants\GetShortPants.cshtml" />
     <Content Include="Views\Pants\GetDryfitPants.cshtml" />
     <Content Include="Views\Pants\GetPantsByPrice.cshtml" />
+    <Content Include="Views\Equipment\GetEquipment.cshtml" />
+    <Content Include="Views\Equipment\GetEquipmentTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,42 @@
+﻿@using Marcos_Sport_Store.Models;
+
+@{
+    string CheckTeamId(int param)
+    {
+        if (param != null)
+        {
+            return "Yes";
+        }
+        return "No";
+    }
+}
+
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th class="table-th">Id</th>
+            <th class="table-th">Sport Type</th>
+            <th class="table-th">Product Name</th>
+            <th class="table-th">Company</th>
+            <th class="table-th">Price</th>
+            <th class="table-th">Quantity</th>
+            <th class="table-th">Team Id</th>
+            <th class="table-th">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Equipment equipment in Model)
+        {
+        <tr class="table-tr">
+            <td class="table-td">@equipment.Id</td>
+            <td class="table-td">@equipment.SportType</td>
+            <td class="table-td">@equipment.ProductName</td>
+            <td class="table-td">@equipment.Company</td>
+            <td class="table-td">@equipment.Price$</td>
+            <td class="table-td">@equipment.Quantity</td>
+            <td class="table-td">@CheckTeamId((int)equipment.TeamId)</td>
+            <td class="table-td"><img class="table-img" src="@equipment.Image" /></td>
+        </tr>
+        }
+    </tbody>
+</table>
