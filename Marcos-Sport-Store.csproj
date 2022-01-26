@@ -141,6 +141,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\api\ClothingController.cs" />
+    <Compile Include="Controllers\api\PantsController.cs" />
+    <Compile Include="Controllers\api\ShirtsController.cs" />
     <Compile Include="Controllers\api\ShoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PantsController.cs" />
