@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Marcos Sport - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/534c2fa5ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/Content/Style.css" />
 </head>
 <body>
@@ -27,17 +28,52 @@
                     <li>@Html.ActionLink("Shoes", "GetShoes", "Shoes")</li>
                     <li>@Html.ActionLink("Shirts", "GetShirts", "Shirts")</li>
                     <li>@Html.ActionLink("Pants", "GetPants", "Pants")</li>
+                    <li>@Html.ActionLink("Equipment", "GetEquipment", "Equipment")</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
+    <footer class="footer">
+        <article class="contact-footer">
+            <div class="footer-links-box">
+                <a title="My linkedin Page" class="contact-links" href="https://www.linkedin.com/in/marcos-bazbih/" target="blank">
+                    <i class="fab fa-linkedin contactIcons"></i>
+                </a>
+                <a title="My Github Page" class="contact-links" href="https://github.com/Marcos-Bazbih" target="blank">
+                    <i class="fab fa-github contactIcons"></i>
+                </a>
+                <a title="My Email" class="contact-links" href="mailto: marcosbazbih@gmail.com" target="blank">
+                    <i class="far fa-envelope contactIcons"></i>
+                </a>
+            </div>
+            <div class="footer-title">
+                <p class="footer-header">Contact Me Here</p>
+            </div>
+        </article>
+        <div class="copyright">
+            <p>&copy; @DateTime.Now.Year - Marcos Bazbih</p>
+        </div>
+        <article class="projects-footer">
+            <div class="footer-title">
+                <p class="footer-header">My Projects</p>
+            </div>
+            <div class="footer-links-box">
+                <a title="Kendrick Lamar Project" class="projects-links" href="https://marcos-bazbih.github.io/Kendrick-Lamar/" target="blank">
+                    <img class="projects-img" src="~/Content/Images/kendrick_Lamar.png" alt="">
+                </a>
+                <a title="Music Records Store Project" class="projects-links" href="https://marcos-bazbih.github.io/Hip-Hop-House-eCommerce-app/"
+                   target="blank">
+                    <img class="projects-img" src="~/Content/Images/HipHop_House.png" alt="">
+                </a>
+                <a title="Movies Project" class="projects-links" href="https://marcos-bazbih.github.io/Marcos-Movies/" target="blank">
+                    <img class="projects-img" src="~/Content/Images/marcos_movies.png" alt="">
+                </a>
+            </div>
+        </article>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
