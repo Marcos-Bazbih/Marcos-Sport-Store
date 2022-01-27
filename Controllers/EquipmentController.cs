@@ -26,7 +26,18 @@ namespace Marcos_Sport_Store.Controllers
         {
             return View(sportStoreDataContext.Equipments);
         }
-
+        public ActionResult GetFootballEquipment()
+        {
+            return View(sportStoreDataContext.Equipments.Where((item) => item.SportType == "Football"));
+        }
+        public ActionResult GetBasketballEquipment()
+        {
+            return View(sportStoreDataContext.Equipments.Where((item) => item.SportType == "Basketball"));
+        }
+        public ActionResult GetEquipmentByPrice()
+        {
+            return View(sportStoreDataContext.Equipments.OrderBy((item) => item.Price));
+        }
 
     }
 }

@@ -3,11 +3,11 @@
 @{
     string CheckTeamId(int param)
     {
-        if (param != null)
-        {
-            return "Yes";
-        }
-        return "No";
+        @*if (param != null)*@
+        @*{*@
+        return "Yes";
+        @*}*@
+        @*return "No";*@
     }
 }
 
@@ -27,16 +27,32 @@
     <tbody>
         @foreach (Equipment equipment in Model)
         {
-        <tr class="table-tr">
-            <td class="table-td">@equipment.Id</td>
-            <td class="table-td">@equipment.SportType</td>
-            <td class="table-td">@equipment.ProductName</td>
-            <td class="table-td">@equipment.Company</td>
-            <td class="table-td">@equipment.Price$</td>
-            <td class="table-td">@equipment.Quantity</td>
-            <td class="table-td">@CheckTeamId((int)equipment.TeamId)</td>
-            <td class="table-td"><img class="table-img" src="@equipment.Image" /></td>
-        </tr>
+            <tr class="table-tr">
+                <td class="table-td">@equipment.Id</td>
+                <td class="table-td">@equipment.SportType</td>
+                <td class="table-td">@equipment.ProductName</td>
+                <td class="table-td">@equipment.Company</td>
+                <td class="table-td">@equipment.Price$</td>
+                <td class="table-td">@equipment.Quantity</td>
+                <td class="table-td">@equipment.TeamId</td>
+                @*<td class="table-td">@CheckTeamId((int)equipment.TeamId)</td>*@
+                <td class="table-td"><img class="table-img" src="@equipment.Image" /></td>
+            </tr>
         }
     </tbody>
 </table>
+<button>
+    @Html.ActionLink("Client", "GetEquipment", "Equipment")
+</button>
+<button>
+    @Html.ActionLink("Admin", "GetEquipmentTable", "Equipment")
+</button>
+<button>
+    @Html.ActionLink("Football", "GetFootballEquipment", "Equipment")
+</button>
+<button>
+    @Html.ActionLink("Basketball", "GetBasketballEquipment", "Equipment")
+</button>
+<button>
+    @Html.ActionLink("Price - Low to high", "GetEquipmentByPrice", "Equipment")
+</button>
