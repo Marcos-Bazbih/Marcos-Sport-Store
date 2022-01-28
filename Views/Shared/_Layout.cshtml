@@ -6,56 +6,71 @@
     <title>Marcos Sport - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/534c2fa5ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/Content/Style.css" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Marcos Sport Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Shoes", "GetShoes", "Shoes")</li>
-                    <li>@Html.ActionLink("Shirts", "GetShirts", "Shirts")</li>
-                    <li>@Html.ActionLink("Pants", "GetPants", "Pants")</li>
-                    <li>@Html.ActionLink("Equipment", "GetEquipment", "Equipment")</li>
-                </ul>
-            </div>
+    <header class="header">
+        <img class="indi-logo" src="~/Content/Images/indi_logo.png" />
+        <img class="tech-logo" src="~/Content/Images/tech_logo.png" />
+
+        <div id="menuBox">
+            <ul id="menu">
+                <li><a class="menuItem" href="#">Home</a></li>
+                <li><a class="menuItem" href="#">Profile</a></li>
+                <li><a class="menuItem" href="#">About</a></li>
+                <li><a class="menuItem" href="#">Contacts</a></li>
+            </ul>
         </div>
-    </div>
-    <div class="container body-content">
+
+
+        <div id="hamburger">
+            <div id="topLine" class="hamburger-lines"></div>
+            <div id="centerLine" class="hamburger-lines"></div>
+            <div id="bottomLine" class="hamburger-lines"></div>
+        </div>
+
+
+        <ul class="nav-bar">
+            <li>@Html.ActionLink("Shirts", "GetShirts", "Shirts", null, new { @class = "nav-bar-links" })</li>
+            <li>@Html.ActionLink("Pants", "GetPants", "Pants", null, new { @class = "nav-bar-links" })</li>
+            <li class="home-li">@Html.ActionLink("Marcos Sport", "Index", "Home", null, new { @class = "home-logo-link" })</li>
+            <li>@Html.ActionLink("Shoes", "GetShoes", "Shoes", null, new { @class = "nav-bar-links" })</li>
+            <li>@Html.ActionLink("Equipment", "GetEquipment", "Equipment", null, new { @class = "nav-bar-links" })</li>
+        </ul>
+
+    </header>
+
+
+    <main class="main-container">
         @RenderBody()
-    </div>
+    </main>
+
+
     <footer class="footer">
         <article class="contact-footer">
             <div class="footer-links-box">
                 <a title="My linkedin Page" class="contact-links" href="https://www.linkedin.com/in/marcos-bazbih/" target="blank">
-                    <i class="fab fa-linkedin contactIcons"></i>
+                    <i class="fab fa-linkedin contact-icons"></i>
                 </a>
                 <a title="My Github Page" class="contact-links" href="https://github.com/Marcos-Bazbih" target="blank">
-                    <i class="fab fa-github contactIcons"></i>
+                    <i class="fab fa-github contact-icons"></i>
                 </a>
                 <a title="My Email" class="contact-links" href="mailto: marcosbazbih@gmail.com" target="blank">
-                    <i class="far fa-envelope contactIcons"></i>
+                    <i class="far fa-envelope contact-icons"></i>
                 </a>
             </div>
             <div class="footer-title">
                 <p class="footer-header">Contact Me Here</p>
             </div>
         </article>
-        <div class="copyright">
-            <p>&copy; @DateTime.Now.Year - Marcos Bazbih</p>
-        </div>
+        <div class="copyright"> &copy; @DateTime.Now.Year - Marcos Bazbih </div>
         <article class="projects-footer">
             <div class="footer-title">
                 <p class="footer-header">My Projects</p>
@@ -77,6 +92,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/javascript")
     @RenderSection("scripts", required: false)
 </body>
 </html>
