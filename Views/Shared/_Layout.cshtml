@@ -8,12 +8,13 @@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/534c2fa5ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/Content/Style.css" />
+    <link rel="stylesheet" href="~/Content/ContentStyle.css" />
 </head>
 <body>
     <header class="header">
@@ -22,10 +23,11 @@
 
         <div id="menuBox">
             <ul id="menu">
-                <li><a class="menuItem" href="#">Home</a></li>
-                <li><a class="menuItem" href="#">Profile</a></li>
-                <li><a class="menuItem" href="#">About</a></li>
-                <li><a class="menuItem" href="#">Contacts</a></li>
+                <li>@Html.ActionLink("Shirts", "GetShirts", "Shirts", null, new { @class = "menuItem" })</li>
+                <li>@Html.ActionLink("Pants", "GetPants", "Pants", null, new { @class = "menuItem" })</li>
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "menuItem" })</li>
+                <li>@Html.ActionLink("Shoes", "GetShoes", "Shoes", null, new { @class = "menuItem" })</li>
+                <li>@Html.ActionLink("Equipment", "GetEquipment", "Equipment", null, new { @class = "menuItem" })</li>
             </ul>
         </div>
 
@@ -40,7 +42,12 @@
         <ul class="nav-bar">
             <li>@Html.ActionLink("Shirts", "GetShirts", "Shirts", null, new { @class = "nav-bar-links" })</li>
             <li>@Html.ActionLink("Pants", "GetPants", "Pants", null, new { @class = "nav-bar-links" })</li>
-            <li class="home-li">@Html.ActionLink("Marcos Sport", "Index", "Home", null, new { @class = "home-logo-link" })</li>
+            <li class="home-li">
+                <a href="@Url.Action("Index", "Home")" class="home-logo-link">
+                    <img class="main-logo" src="~/Content/Images/logo_transparent_new.png" />
+                </a>
+            </li>
+            @*<li class="home-li">@Html.ActionLink("Sport Mania", "Index", "Home", null, new { @class = "home-logo-link" })</li>*@
             <li>@Html.ActionLink("Shoes", "GetShoes", "Shoes", null, new { @class = "nav-bar-links" })</li>
             <li>@Html.ActionLink("Equipment", "GetEquipment", "Equipment", null, new { @class = "nav-bar-links" })</li>
         </ul>

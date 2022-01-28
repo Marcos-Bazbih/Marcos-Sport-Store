@@ -1,0 +1,141 @@
+﻿/*--------------- cards view ---------------*/
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    width: 33%;
+    height: 65vh;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px double black;
+}
+
+.card-img-box {
+    width: 100%;
+    height: 80%;
+}
+
+.card-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+}
+
+.card-info-header, .card-info-footer {
+    width: 100%;
+    height: 50%;
+}
+
+.card-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .card-info-footer > h2 {
+        width: 30%;
+    }
+
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*.card {
+    width: 30%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    border: 4px double black;
+    border-radius: 15%;
+    margin-bottom: 4vh;
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-info, .card-img-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+}*/
+
+/*.card-info {
+    padding: 10%;
+    right: 100%;
+    font-size: 2rem;
+    overflow: auto;
+}
+
+.card-img-box {
+    right: 0;
+}
+
+.card:hover > .card-img-box {
+    right: -100%;
+}
+
+.card:hover > .card-info {
+    right: 0;
+}*/
+
+
+/*--------------- cards view ---------------*/
+
+
+
+/*--------------- admin view ---------------*/
+
+.admin-table {
+    width: 100%;
+}
+
+.table-tr {
+    transition: 0.3s;
+}
+
+    .table-tr:hover {
+        background: gray;
+    }
+
+
+.table-th {
+    text-align: center;
+    font-weight: 900;
+}
+
+.table-td {
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    text-align: center;
+    height: 30vh;
+    min-width: 8vw;
+    max-width: 15vw;
+}
+
+.table-img {
+    width: 100%;
+    height: 100%;
+}
+
+/*--------------- admin view ---------------*/
