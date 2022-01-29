@@ -1,4 +1,29 @@
-﻿const menu = document.getElementById("menu");
+﻿const heartIcons = document.getElementsByClassName("heart-icon");
+
+for (let heart of heartIcons) {
+    let isClicked = false;
+    heart.onclick = () => {
+        if (isClicked === false) {
+            isClicked = true;
+            heart.classList.add("item-liked");
+        }
+        else {
+            isClicked = false;
+            heart.classList.remove("item-liked");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+const menu = document.getElementById("menu");
 const menuItem = document.getElementsByClassName("menuItem");
 const hamburger = document.getElementById("hamburger");
 

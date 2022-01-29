@@ -1,6 +1,8 @@
 ﻿@using Marcos_Sport_Store.Models;
 
 @{
+    ViewBag.Title = "Shirts";
+
     string CheckBool(bool param)
     {
         if (param == true)
@@ -10,6 +12,24 @@
         return "No";
     }
 }
+
+
+<div class="page-header">
+    <a title="admin view" href="@Url.Action("GetShirtsTable", "Shirts")" class="admin-link admin-mode">
+        <i class="fas fa-users-cog admin-icon"></i>
+    </a>
+    <div class="options-box">
+        @Html.ActionLink("All Shirts", "GetShirts", "Shirts", null, new { @class = "views-options" })
+        @Html.ActionLink("Short Shirts", "GetShortShirts", "Shirts", null, new { @class = "views-options" })
+        @Html.ActionLink("Long Shirts", "GetLongShirts", "Shirts", null, new { @class = "views-options" })
+        @Html.ActionLink("Dryfit Shirts", "GetDryfitShirts", "Shirts", null, new { @class = "views-options" })
+        @Html.ActionLink("Price - Low to high", "GetShirtsByPrice", "Shirts", null, new { @class = "views-options" })
+    </div>
+    <div class="page-title">
+        <h1 class="page-title-h1"><span class="header-span">Shirts</span> - Admin Mode</h1>
+    </div>
+</div>
+
 
 <table class="admin-table">
     <thead>
@@ -44,21 +64,3 @@
         }
     </tbody>
 </table>
-<button>
-    @Html.ActionLink("Client", "GetShirts", "Shirts")
-</button>
-<button>
-    @Html.ActionLink("Admin", "GetShirtsTable", "Shirts")
-</button>
-<button>
-    @Html.ActionLink("Short Shirts", "GetShortShirts", "Shirts")
-</button>
-<button>
-    @Html.ActionLink("Long Shirts", "GetLongShirts", "Shirts")
-</button>
-<button>
-    @Html.ActionLink("Dryfit Shirts", "GetDryfitShirts", "Shirts")
-</button>
-<button>
-    @Html.ActionLink("Price - Low to high", "GetShirtsByPrice", "Shirts")
-</button>

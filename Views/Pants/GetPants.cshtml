@@ -1,9 +1,30 @@
 ﻿@using Marcos_Sport_Store.Models;
 
+@{
+    ViewBag.Title = "Pants";
+}
+
+<div class="page-header">
+    <a title="admin view" href="@Url.Action("GetPantsTable", "Pants")" class="admin-link">
+        <i class="fas fa-users-cog admin-icon"></i>
+    </a>
+    <div class="options-box">
+        @Html.ActionLink("All Pants", "GetPants", "Pants", null, new { @class = "views-options current-view" })
+        @Html.ActionLink("Short Pants", "GetShortPants", "Pants", null, new { @class = "views-options" })
+        @Html.ActionLink("Long Pants", "GetLongPants", "Pants", null, new { @class = "views-options" })
+        @Html.ActionLink("Dryfit Pants", "GetDryfitPants", "Pants", null, new { @class = "views-options" })
+        @Html.ActionLink("Price - Low to high", "GetPantsByPrice", "Pants", null, new { @class = "views-options" })
+    </div>
+    <div class="page-title">
+        <h1 class="page-title-h1"><span class="header-span">Pants</span> - Full collection</h1>
+    </div>
+</div>
+
 <section class="cards-container">
     @foreach (Clothing clothing in Model)
     {
         <article class="card">
+            <i class="fas fa-heart heart-icon"></i>
             <div class="card-img-box">
                 <img class="card-img"
                      src="@clothing.Image" />
@@ -21,21 +42,3 @@
         </article>
     }
 </section>
-<button>
-    @Html.ActionLink("Client", "GetPants", "Pants")
-</button>
-<button>
-    @Html.ActionLink("Admin", "GetPantsTable", "Pants")
-</button>
-<button>
-    @Html.ActionLink("Short Pants", "GetShortPants", "Pants")
-</button>
-<button>
-    @Html.ActionLink("Long Pants", "GetLongPants", "Pants")
-</button>
-<button>
-    @Html.ActionLink("Dryfit Pants", "GetDryfitPants", "Pants")
-</button>
-<button>
-    @Html.ActionLink("Price - Low to high", "GetPantsByPrice", "Pants")
-</button>

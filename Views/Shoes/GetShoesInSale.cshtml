@@ -2,10 +2,28 @@
 @{
     ViewBag.Title = "Shoes";
 }
+
+<div class="page-header">
+    <a title="admin view" href="@Url.Action("GetShoesTable", "Shoes")" class="admin-link">
+        <i class="fas fa-users-cog admin-icon"></i>
+    </a>
+
+    <div class="options-box">
+        @Html.ActionLink("All Shoes", "GetShoes", "Shoes", null, new { @class = "views-options" })
+        @Html.ActionLink("Shoes in Sale", "GetShoesInSale", "Shoes", null, new { @class = "views-options current-view" })
+    </div>
+
+    <div class="page-title">
+        <h1 class="page-title-h1"><span class="header-span">Shoes</span> - In Sale</h1>
+    </div>
+
+</div>
+
 <section class="cards-container">
     @foreach (Shoe shoe in Model)
     {
         <article class="card">
+            <i class="fas fa-heart heart-icon"></i>
             <div class="card-img-box">
                 <img class="card-img"
                      src="@shoe.Image" />
@@ -23,9 +41,3 @@
         </article>
     }
 </section>
-<button>
-    @Html.ActionLink("Client", "GetShoes", "Shoes")
-</button>
-<button>
-    @Html.ActionLink("Admin", "GetShoesTable", "Shoes")
-</button>

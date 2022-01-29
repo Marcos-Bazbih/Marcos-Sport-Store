@@ -1,15 +1,33 @@
 ﻿@using Marcos_Sport_Store.Models;
 
 @{
-    string CheckTeamId(int param)
+    ViewBag.Title = "Equipment";
+
+    string CheckTeamId(int? param)
     {
-        @*if (param != null)*@
-        @*{*@
-        return "Yes";
-        @*}*@
-        @*return "No";*@
+        if (param.HasValue)
+        {
+            return $"{param}";
+        }
+        return "No";
     }
 }
+
+
+<div class="page-header">
+    <a title="admin view" href="@Url.Action("GetEquipmentTable", "Equipment")" class="admin-link admin-mode">
+        <i class="fas fa-users-cog admin-icon"></i>
+    </a>
+    <div class="options-box">
+        @Html.ActionLink("All Equipment", "GetEquipment", "Equipment", null, new { @class = "views-options" })
+        @Html.ActionLink("Football", "GetFootballEquipment", "Equipment", null, new { @class = "views-options" })
+        @Html.ActionLink("Basketball", "GetBasketballEquipment", "Equipment", null, new { @class = "views-options" })
+        @Html.ActionLink("Price - Low to high", "GetEquipmentByPrice", "Equipment", null, new { @class = "views-options" })
+    </div>
+    <div class="page-title">
+        <h1 class="page-title-h1"><span class="header-span">Equipment</span> - Admin Mode</h1>
+    </div>
+</div>
 
 <table class="admin-table">
     <thead>
@@ -27,32 +45,16 @@
     <tbody>
         @foreach (Equipment equipment in Model)
         {
-            <tr class="table-tr">
-                <td class="table-td">@equipment.Id</td>
-                <td class="table-td">@equipment.SportType</td>
-                <td class="table-td">@equipment.ProductName</td>
-                <td class="table-td">@equipment.Company</td>
-                <td class="table-td">@equipment.Price$</td>
-                <td class="table-td">@equipment.Quantity</td>
-                <td class="table-td">@equipment.TeamId</td>
-                @*<td class="table-td">@CheckTeamId((int)equipment.TeamId)</td>*@
-                <td class="table-td"><img class="table-img" src="@equipment.Image" /></td>
-            </tr>
+        <tr class="table-tr">
+            <td class="table-td">@equipment.Id</td>
+            <td class="table-td">@equipment.SportType</td>
+            <td class="table-td">@equipment.ProductName</td>
+            <td class="table-td">@equipment.Company</td>
+            <td class="table-td">@equipment.Price$</td>
+            <td class="table-td">@equipment.Quantity</td>
+            <td class="table-td">@CheckTeamId(equipment.TeamId)</td>
+            <td class="table-td"><img class="table-img" src="@equipment.Image" /></td>
+        </tr>
         }
     </tbody>
 </table>
-<button>
-    @Html.ActionLink("Client", "GetEquipment", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Admin", "GetEquipmentTable", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Football", "GetFootballEquipment", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Basketball", "GetBasketballEquipment", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Price - Low to high", "GetEquipmentByPrice", "Equipment")
-</button>

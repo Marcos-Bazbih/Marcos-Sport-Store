@@ -1,9 +1,29 @@
 ﻿@using Marcos_Sport_Store.Models;
 
+@{
+    ViewBag.Title = "Equipment";
+}
+
+<div class="page-header">
+    <a title="admin view" href="@Url.Action("GetEquipmentTable", "Equipment")" class="admin-link">
+        <i class="fas fa-users-cog admin-icon"></i>
+    </a>
+    <div class="options-box">
+        @Html.ActionLink("All Equipment", "GetEquipment", "Equipment", null, new { @class = "views-options" })
+        @Html.ActionLink("Football", "GetFootballEquipment", "Equipment", null, new { @class = "views-options" })
+        @Html.ActionLink("Basketball", "GetBasketballEquipment", "Equipment", null, new { @class = "views-options current-view" })
+        @Html.ActionLink("Price - Low to high", "GetEquipmentByPrice", "Equipment", null, new { @class = "views-options" })
+    </div>
+    <div class="page-title">
+        <h1 class="page-title-h1"><span class="header-span">Equipment</span> - Basketball</h1>
+    </div>
+</div>
+
 <section class="cards-container">
     @foreach (Equipment equipment in Model)
     {
         <article class="card">
+            <i class="fas fa-heart heart-icon"></i>
             <div class="card-img-box">
                 <img class="card-img"
                      src="@equipment.Image" />
@@ -21,18 +41,3 @@
         </article>
     }
 </section>
-<button>
-    @Html.ActionLink("Client", "GetEquipment", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Admin", "GetEquipmentTable", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Football", "GetFootballEquipment", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Basketball", "GetBasketballEquipment", "Equipment")
-</button>
-<button>
-    @Html.ActionLink("Price - Low to high", "GetEquipmentByPrice", "Equipment")
-</button>

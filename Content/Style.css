@@ -28,7 +28,7 @@ body {
 
 /*-- main --*/
 .main-container {
-    min-height: 78vh;
+    min-height: 73vh;
     width: 100%;
 }
 
@@ -186,6 +186,7 @@ body {
 
 /*-- footer --*/
 .footer {
+    margin-top:5vh;
     background: var(--darkGray);
     height: 10vh;
     width: 100%;
