@@ -2,8 +2,9 @@
 :root {
     --mainFont: 'Lobster', cursive;
     --headersFont: 'Rum Raisin', sans-serif;
-    --mainYellow: #f4e022;
-    --mainPurple: #5a37c3;
+    --mainDarkBlue: #21273d;
+    --mainLightBlue: #b9d4f1;
+    --darkGray: #6a759b;
 }
 
 * {
@@ -17,13 +18,14 @@ html {
 }
 
 body {
-    background: #18224b;
+    background: var(--mainLightBlue);
 }
 
 
 
 
 /*--------------- layout---------------*/
+
 /*-- main --*/
 .main-container {
     min-height: 78vh;
@@ -128,16 +130,16 @@ body {
 
 .nav-bar-links {
     font-family: var(--headersFont);
-    font-weight:900;
+    font-weight: 900;
     font-size: 2.8rem;
     text-decoration: none;
-    color: var(--mainYellow);
+    color: var(--mainDarkBlue);
     padding-bottom: 10px;
-    background-image: linear-gradient(0deg, var(--mainYellow),var(--mainYellow));
+    background-image: linear-gradient(0deg, var(--mainDarkBlue),var(--mainDarkBlue));
     background-size: 0% 3px;
     background-repeat: no-repeat;
     background-position: center bottom;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
     .nav-bar-links:hover {
@@ -155,12 +157,12 @@ body {
     font-size: 4.5rem;
     font-family: var(--headersFont);
     text-decoration: none;
-    color: var(--mainYellow);
+    color: var(--mainDarkBlue);
 }
 
 .main-logo {
-    width: 75%;
-    height: 100%;
+    width: 70%;
+    height: 110%;
 }
 
 @media screen and (max-width:768px) {
@@ -180,9 +182,11 @@ body {
 
 
 
+
+
 /*-- footer --*/
 .footer {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--darkGray);
     height: 10vh;
     width: 100%;
     display: flex;
@@ -194,7 +198,7 @@ body {
 .copyright {
     color: black;
     font-family: var(--headersFont);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 900;
     height: 100%;
     width: 15%;
@@ -204,7 +208,8 @@ body {
 }
 
 .contact-footer, .projects-footer {
-    color: var(--mainYellow);
+    color: var(--mainDarkBlue);
+    font-weight: 900;
     height: 100%;
     width: 40%;
     display: flex;
@@ -245,7 +250,7 @@ body {
 .projects-img {
     width: 65%;
     height: 65%;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
     .projects-img:hover {
@@ -257,13 +262,12 @@ body {
     width: min-content;
     height: min-content;
     text-decoration: none;
-    color: white;
 }
 
 .contact-icons {
     color: black;
     font-size: 4vh;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
     .contact-icons:hover {

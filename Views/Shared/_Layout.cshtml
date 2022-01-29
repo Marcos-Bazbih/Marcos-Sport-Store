@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcos Sport - @ViewBag.Title</title>
+    <title>Sport Mania - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/534c2fa5ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/Content/Style.css" />
     <link rel="stylesheet" href="~/Content/ContentStyle.css" />
+    <link rel="icon" href="~/Content/Images/mini_logo.png" />
 </head>
 <body>
     <header class="header">
@@ -44,10 +45,9 @@
             <li>@Html.ActionLink("Pants", "GetPants", "Pants", null, new { @class = "nav-bar-links" })</li>
             <li class="home-li">
                 <a href="@Url.Action("Index", "Home")" class="home-logo-link">
-                    <img class="main-logo" src="~/Content/Images/logo_transparent_new.png" />
+                    <img class="main-logo" src="~/Content/Images/logo_transparent.png" />
                 </a>
             </li>
-            @*<li class="home-li">@Html.ActionLink("Sport Mania", "Index", "Home", null, new { @class = "home-logo-link" })</li>*@
             <li>@Html.ActionLink("Shoes", "GetShoes", "Shoes", null, new { @class = "nav-bar-links" })</li>
             <li>@Html.ActionLink("Equipment", "GetEquipment", "Equipment", null, new { @class = "nav-bar-links" })</li>
         </ul>

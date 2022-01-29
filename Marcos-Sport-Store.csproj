@@ -166,14 +166,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ContentStyle.css" />
-    <Content Include="Content\Images\facebook_cover_photo_1.png" />
     <Content Include="Content\Images\HipHop_House.png" />
     <Content Include="Content\Images\indi_logo.png" />
     <Content Include="Content\Images\kendrick_Lamar.png" />
-    <Content Include="Content\Images\linkedin_banner_image_1.png" />
-    <Content Include="Content\Images\logo.png" />
-    <Content Include="Content\Images\logo_transparent_new.png" />
+    <Content Include="Content\Images\logo_transparent.png" />
+    <Content Include="Content\Images\main_logo.png" />
     <Content Include="Content\Images\marcos_movies.png" />
+    <Content Include="Content\Images\mini_logo.png" />
     <Content Include="Content\Images\tech_logo.png" />
     <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
