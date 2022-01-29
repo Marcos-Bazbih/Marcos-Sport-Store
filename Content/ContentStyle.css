@@ -224,9 +224,9 @@ span {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    transition: 0.5s ease-in-out;
     color: var(--mainDarkBlue);
-    position:relative;
+    position: relative;
+    transition: 0.5s ease-in-out;
 }
 
     .profile-info:hover {
@@ -245,21 +245,25 @@ span {
     color: var(--mainLightBlue);
     background-size: 100% 3px;
 }
+
 .profile-info:hover > .tag-span {
     color: var(--mainLightBlue);
 }
-.wave-icon:first-of-type {
+
+.mini-icon {
     font-size: 4rem;
     position: absolute;
-    right: 10%;
-    top: 10%;
 }
-.wave-icon:last-of-type {
-    font-size: 4rem;
-    position: absolute;
-    left: 10%;
-    bottom: 10%;
-}
+
+    .mini-icon:first-of-type {
+        right: 10%;
+        top: 10%;
+    }
+
+    .mini-icon:last-of-type {
+        left: 10%;
+        bottom: 10%;
+    }
 
 .tag-span:first-of-type {
     font-family: var(--headersFont);
@@ -381,6 +385,7 @@ span {
     cursor: pointer;
     color: var(--mainDarkBlue);
 }
+
 .item-liked {
     animation-name: like;
     animation-duration: 0.5s;
@@ -400,6 +405,7 @@ span {
         color: red;
     }
 }
+
 .cart-icon {
     position: absolute;
     font-size: 2.5rem;
@@ -409,6 +415,7 @@ span {
     cursor: pointer;
     color: var(--mainDarkBlue);
 }
+
 .item-added {
     animation-name: cart;
     animation-duration: 0.5s;
