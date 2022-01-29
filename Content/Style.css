@@ -1,5 +1,4 @@
-﻿/*--------------- reset settings ---------------*/
-:root {
+﻿:root {
     --mainFont: 'Lobster', cursive;
     --headersFont: 'Rum Raisin', sans-serif;
     --mainDarkBlue: #21273d;
@@ -23,25 +22,19 @@ body {
 }
 
 
-
-
-/*--------------- layout---------------*/
-
-/*-- main --*/
 .main-container {
     min-height: 73vh;
     width: 100%;
 }
 
 
-
-/*-- header --*/
 .header {
     position: relative;
     display: flex;
     height: 12vh;
     width: 100%;
 }
+
 
 #menuBox {
     position: fixed;
@@ -182,10 +175,6 @@ body {
 }
 
 
-
-
-
-/*-- footer --*/
 .footer {
     margin-top:5vh;
     background: var(--darkGray);
@@ -196,7 +185,7 @@ body {
     flex-wrap: wrap;
     border-top: 3px double black;
 }
-
+    
 .copyright {
     color: black;
     font-family: var(--headersFont);

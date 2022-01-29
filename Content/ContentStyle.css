@@ -6,7 +6,6 @@
     --darkGray: #6a759b;
 }
 
-/*--------------- Hame page ---------------*/
 .welcome-container {
     width: 100%;
     height: 88vh;
@@ -47,8 +46,6 @@
     }
 
 
-
-
 .welcome-sign {
     height: 100%;
     width: 50%;
@@ -65,7 +62,6 @@
     font-family: var(--mainFont);
     font-size: 12rem;
 }
-
 
 .welcome-info {
     height: 80%;
@@ -116,12 +112,6 @@ span {
 }
 
 
-
-
-
-
-
-
 .contact-container {
     width: 100%;
     height: 70vh;
@@ -130,7 +120,6 @@ span {
     align-items: center;
     justify-content: center;
 }
-
 
 .contact-store-box {
     width: 40%;
@@ -152,8 +141,6 @@ span {
 .contact-store-icons {
     font-size: 3rem;
 }
-
-
 
 .contact-info {
     height: 100%;
@@ -204,10 +191,93 @@ span {
     font-size: 12rem;
 }
 
+.profile-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-sign {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-h1 {
+    padding-top: 7vh;
+    width: 85%;
+    height: 80%;
+    color: var(--mainDarkBlue);
+    font-family: var(--mainFont);
+    font-size: 12rem;
+}
+
+.profile-info {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    color: var(--mainDarkBlue);
+    position:relative;
+}
+
+    .profile-info:hover {
+        background: var(--mainDarkBlue);
+        color: var(--mainLightBlue);
+        border-radius: 10%;
+    }
+
+.profile-h2 {
+    text-align: center;
+    font-family: var(--headersFont);
+    font-size: 4rem;
+}
+
+.profile-info:hover > .profile-h2 span {
+    color: var(--mainLightBlue);
+    background-size: 100% 3px;
+}
+.profile-info:hover > .tag-span {
+    color: var(--mainLightBlue);
+}
+.wave-icon:first-of-type {
+    font-size: 4rem;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+.wave-icon:last-of-type {
+    font-size: 4rem;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+
+.tag-span:first-of-type {
+    font-family: var(--headersFont);
+    font-size: 5rem;
+    position: absolute;
+    left: 17%;
+    top: 17%;
+}
+
+.tag-span:last-of-type {
+    font-family: var(--headersFont);
+    font-size: 5rem;
+    position: absolute;
+    bottom: 17%;
+    right: 17%;
+}
 
 
-/*--------------- Hame page ---------------*/
-/*--------------- cards view ---------------*/
 .cards-container {
     display: flex;
     justify-content: space-evenly;
@@ -311,7 +381,6 @@ span {
     cursor: pointer;
     color: var(--mainDarkBlue);
 }
-
 .item-liked {
     animation-name: like;
     animation-duration: 0.5s;
@@ -329,6 +398,33 @@ span {
     100% {
         transform: scale(1);
         color: red;
+    }
+}
+.cart-icon {
+    position: absolute;
+    font-size: 2.5rem;
+    left: 5%;
+    top: 5%;
+    z-index: 10;
+    cursor: pointer;
+    color: var(--mainDarkBlue);
+}
+.item-added {
+    animation-name: cart;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cart {
+    0% {
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -382,14 +478,6 @@ span {
         width: 30%;
     }
 
-/*--------------- cards view ---------------*/
-
-
-
-
-
-
-/*--------------- admin view ---------------*/
 
 .admin-table {
     width: 90%;
@@ -429,5 +517,3 @@ span {
     width: 100%;
     height: 100%;
 }
-
-/*--------------- admin view ---------------*/

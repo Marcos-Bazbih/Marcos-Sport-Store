@@ -1,6 +1,18 @@
-﻿
+﻿const cartIcons = document.getElementsByClassName("cart-icon");
 
-
+for (let cart of cartIcons) {
+    let isClicked = false;
+    cart.onclick = () => {
+        if (isClicked === false) {
+            isClicked = true;
+            cart.classList.add("item-added");
+        }
+        else {
+            isClicked = false;
+            cart.classList.remove("item-added");
+        }
+    }
+}
 
 
 const heartIcons = document.getElementsByClassName("heart-icon");
