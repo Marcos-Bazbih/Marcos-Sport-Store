@@ -1,4 +1,9 @@
-﻿const heartIcons = document.getElementsByClassName("heart-icon");
+﻿
+
+
+
+
+const heartIcons = document.getElementsByClassName("heart-icon");
 
 for (let heart of heartIcons) {
     let isClicked = false;

@@ -9,20 +9,52 @@
 /*--------------- Hame page ---------------*/
 .welcome-container {
     width: 100%;
-    height: 73vh;
+    height: 88vh;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.welcome-sign, .welcome-info {
-    width: 50%;
-    height: 100%;
+.home-nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 5%;
+    margin: auto;
+    z-index: 10;
 }
+
+.home-nav-link {
+    text-align: center;
+    width: 100%;
+}
+
+.home-nav-icon {
+    font-size: 3rem;
+    color: var(--mainDarkBlue);
+    transition: 0.2s ease-in-out;
+}
+
+    .home-nav-icon:hover {
+        transform: scale(1.5);
+    }
+
+
+
 
 .welcome-sign {
+    height: 100%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    /*    align-items:center;*/
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .welcome-h1 {
@@ -36,6 +68,8 @@
 
 
 .welcome-info {
+    height: 80%;
+    width: 40%;
     color: var(--mainDarkBlue);
     display: flex;
     flex-direction: column;
@@ -49,7 +83,7 @@
     .welcome-info:hover {
         background: var(--mainDarkBlue);
         color: var(--mainLightBlue);
-        border-radius: 30%;
+        border-radius: 10%;
     }
 
         .welcome-info:hover > .welcome-h2 span {
@@ -88,8 +122,91 @@ span {
 
 
 
+.contact-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 
+.contact-store-box {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.5s ease-in-out;
+}
+
+    .contact-store-box:hover {
+        background: var(--mainDarkBlue);
+        border-radius: 10%;
+    }
+
+        .contact-store-box:hover > .contact-info {
+            color: var(--mainLightBlue);
+        }
+
+.contact-store-icons {
+    font-size: 3rem;
+}
+
+
+
+.contact-info {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--mainDarkBlue);
+    font-family: var(--headersFont);
+}
+
+    .contact-info h1 {
+        font-size: 3rem;
+    }
+
+    .contact-info:first-of-type {
+        align-items: center;
+        height: 85%;
+    }
+
+.contact-time-info {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+    .contact-time-info h1 {
+        font-size: 2rem;
+    }
+
+.contact-sign {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-h1 {
+    padding-top: 7vh;
+    width: 85%;
+    height: 80%;
+    color: var(--mainDarkBlue);
+    font-family: var(--mainFont);
+    font-size: 12rem;
+}
+
+
+
+/*--------------- Hame page ---------------*/
 /*--------------- cards view ---------------*/
 .cards-container {
     display: flex;
@@ -168,11 +285,6 @@ span {
         color: var(--mainDarkBlue);
         border-color: var(--mainDarkBlue);
     }
-
-
-
-
-
 
 .card {
     background: var(--mainLightBlue);
@@ -269,6 +381,7 @@ span {
     .card-info-footer > h2 {
         width: 30%;
     }
+
 /*--------------- cards view ---------------*/
 
 

@@ -2,18 +2,52 @@
     ViewBag.Title = "Home";
 }
 
-<section class="welcome-container">
+<div class="home-nav">
+    <a class="home-nav-link" href="#"><i id="homeIcon" class="fas fa-home home-nav-icon"></i></a>
+    <a class="home-nav-link" href="#contactSection"><i id="contactIcon" class="fas fa-map-marker-alt home-nav-icon"></i></a>
+    <a class="home-nav-link" href="#"><i id="profileIcon" class="fas fa-user home-nav-icon"></i></a>
+</div>
+
+
+<section id="welcomeSection" class="welcome-container">
 
     <article class="welcome-sign">
         <h1 class="welcome-h1">Welcome to Sport Mania</h1>
     </article>
-    
+
     <article class="welcome-info">
-        <h2 class="welcome-h2">We are changing the <span>face of Sport.</span> <br />
+        <h2 class="welcome-h2">
+            We are changing the <span>face of Sport.</span> <br />
             From humble origins starting as a small sports shop in Ashdod in 1998,
             <span>Sport Mania</span> is now a collection of the world’s most <span>iconic</span> brands.
         </h2>
         <img class="mini-logo" src="~/Content/Images/mini_logo.png" />
     </article>
 
+</section>
+
+<section id="contactSection" class="contact-container">
+    <article class="contact-store-box">
+
+        <div class="contact-info">
+            <h1><i class="fas fa-phone contact-store-icons"></i></h1>
+            <h1><i class="fas fa-map-marked-alt contact-store-icons"></i></h1>
+            <h1><i class="far fa-clock contact-store-icons"></i></h1>
+        </div>
+
+        <div class="contact-info">
+            <h1>08-123456</h1>
+            <h1>Israel, Ashdod</h1>
+            <div class="contact-time-info">
+                <h1>Sunday - Thursday: 9:00 - 21:30</h1>
+                <h1>Friday: 9:00 - 13:30</h1>
+                <h1>Saturday: 19:00 - 22:30</h1>
+            </div>
+        </div>
+
+
+    </article>
+    <article class="contact-sign">
+        <h1 class="contact-h1">Contact Us</h1>
+    </article>
 </section>
